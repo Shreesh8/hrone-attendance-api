@@ -26,8 +26,6 @@ the four analytics aggregations, and `/admin/explain/{endpoint}`.
 
 ## Not done / known gaps
 
-## Not done / known gaps
-
 - No automated test suite in the repo. I tested by hand through `/docs` against generated data (about 95k logs), including ties, weekend records, a mid-month joiner, an employee with no logs, an overnight shift and a log for an unknown employee.
 - I checked the explain output for all five endpoints on that data and saw IXSCAN with no COLLSCAN.
 - The department trend builds its daily rows with `$range` and `$unwind`, not `$densify`.
